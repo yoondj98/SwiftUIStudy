@@ -1,2 +1,2 @@
 # SwiftUI
-Swift UI 뿌수기
+SwiftUI 뿌수기
