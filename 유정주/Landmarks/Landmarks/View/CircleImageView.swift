@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CircleImageView: View {
     var body: some View {
-        Image("Sonoma")
+        Image("turtlerock")
             .resizable()
             .frame(width: 300, height: 300)
             .clipShape(Circle())
