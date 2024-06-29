@@ -30,7 +30,10 @@ struct LandmarkRow: View {
 
 #Preview("Turtle Rock") {
     Group {
-        LandmarkRow(landmark: landmarks[0])
-        LandmarkRow(landmark: landmarks[1])
+        let landmarks = ModelData().landmarks
+        return Group {
+            LandmarkRow(landmark: landmarks[0])
+            LandmarkRow(landmark: landmarks[1])
+        }
     }
 }

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct LandmarkList: View {
     
+    @Environment(ModelData.self) var modelData
     @State private var showFavoritesOnly = false
     
     var filteredLandmarks: [Landmark] {
         guard showFavoritesOnly else {
-            return landmarks
+            return modelData.landmarks
         }
-        return landmarks.filter { $0.isFavorite }
+        return modelData.landmarks.filter { $0.isFavorite }
     }
     
     var body: some View {
@@ -43,4 +44,5 @@ struct LandmarkList: View {
 
 #Preview {
     LandmarkList()
+        .environment(ModelData())
 }
