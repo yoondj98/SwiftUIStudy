@@ -1,6 +1,9 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-*/
+//
+//  ContentView.swift
+//  WeatherForecast
+//
+//  Created by 이준복 on 6/30/24.
+//
 
 import SwiftUI
 
@@ -9,9 +12,13 @@ struct ContentView: View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundColor(.accentColor)
+                .foregroundStyle(.tint)
             Text("Hello, world!")
         }
         .padding()
     }
+}
+
+#Preview {
+    ContentView()
 }
