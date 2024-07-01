@@ -23,6 +23,19 @@ struct LandmarkRow: View {
     }
 }
 
-#Preview {
+#Preview("Turtle Rock") {
     LandmarkRow(landmark: landmarks[0])
+}
+
+// 이렇게 추가 시 원하는 Preview를 여러개 만들 수 있음.
+
+#Preview("Salmon") {
+    LandmarkRow(landmark: landmarks[1])
+}
+
+#Preview {
+    Group {
+        LandmarkRow(landmark: landmarks[0])
+        LandmarkRow(landmark: landmarks[1])
+    }
 }
