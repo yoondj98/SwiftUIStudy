@@ -13,7 +13,9 @@
 	- SwiftUI는 WindowGroup, Window, DocumentGroup, Settings 등의 다양한 Scene 지원
 	- WindowGroup은 플랫폼에 따라 다른 동작을 한다. macOS와 iPadOS에서는 그룹 안에서 하나 이상의 window를 open할 수 있다. 
 - 뷰 계층구조
-    - 사진 추가 예정
+
+    <img width="182" alt="Screenshot 2024-06-27 at 2 14 03 PM" src="https://github.com/junbok97/SwiftUI/assets/22342277/fcada05c-ac3b-4d1b-8652-9fcf1ffbbd91">
+
 - VStack은 스크린에 보이거나 보이지 않는 뷰들을 모두 동시에 렌더링한다. 
 	- 따라서 VStack은 작은 숫자의 subview들만을 가질 때 사용하면 좋다.
 	- 많은 숫자의 subview들을 표시해야 한다면 LazyVStack을 사용하는 것이 좋다.
