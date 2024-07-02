@@ -9,9 +9,19 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
-        // landmarks는 전역변수로 어디서든 접근이 가능.
-        List(landmarks) {
-            LandmarkRow(landmark: $0)
+        // NavigationSplitView는 iPad 같은 곳에서 사이드바로 반영됨.
+        NavigationSplitView {
+            // landmarks는 전역변수로 어디서든 접근이 가능.
+            List(landmarks) { landmark in
+                NavigationLink {
+                    LandmarkDetail()
+                } label: {
+                    LandmarkRow(landmark: landmark)
+                }
+            }
+            .navigationTitle("Landmarks")
+        } detail: {
+            Text("Select a Landmark")
         }
     }
 }
