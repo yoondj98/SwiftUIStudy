@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    
+    @State var showFavoriteOnly = true
+    
+    var filteredLandmarks: [Landmark] {
+        landmarks.filter { landmark in
+            !showFavoriteOnly || landmark.isFavorite
+        }
+    }
+    
     var body: some View {
         // NavigationSplitView는 iPad 같은 곳에서 사이드바로 반영됨.
         NavigationSplitView {
             // landmarks는 전역변수로 어디서든 접근이 가능.
-            List(landmarks) { landmark in
+            List(filteredLandmarks) { landmark in
                 NavigationLink {
                     LandmarkDetail(landmark: landmark)
                 } label: {
