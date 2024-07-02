@@ -7,21 +7,19 @@
 
 import SwiftUI
 
-struct Section4View: View {
+struct CircleImage: View {
   var body: some View {
     Image("cat")
       .resizable()
       .aspectRatio(contentMode: .fit)
       .clipShape(Circle())
       .overlay {
-        Circle()
-          .stroke(.gray ,lineWidth: 4)
+        Circle().stroke(.gray ,lineWidth: 4)
       }
       .shadow(radius: 7)
-      .padding()
   }
 }
 
 #Preview {
-  Section4View()
+  CircleImage()
 }
