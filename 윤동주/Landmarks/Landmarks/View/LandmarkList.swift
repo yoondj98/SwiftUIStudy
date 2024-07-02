@@ -9,9 +9,10 @@ import SwiftUI
 
 struct LandmarkList: View {
     
-    @State var showFavoriteOnly = true
+    @State var showFavoriteOnly = false
     
     var filteredLandmarks: [Landmark] {
+        // landmarks는 전역변수로 어디서든 접근이 가능.
         landmarks.filter { landmark in
             !showFavoriteOnly || landmark.isFavorite
         }
@@ -20,14 +21,21 @@ struct LandmarkList: View {
     var body: some View {
         // NavigationSplitView는 iPad 같은 곳에서 사이드바로 반영됨.
         NavigationSplitView {
-            // landmarks는 전역변수로 어디서든 접근이 가능.
-            List(filteredLandmarks) { landmark in
-                NavigationLink {
-                    LandmarkDetail(landmark: landmark)
-                } label: {
-                    LandmarkRow(landmark: landmark)
+            List {
+                Toggle(isOn: $showFavoriteOnly) {
+                    Text("Favorites only")
+                }
+                
+                ForEach(filteredLandmarks) { landmark in
+                    NavigationLink {
+                        LandmarkDetail(landmark: landmark)
+                    } label: {
+                        LandmarkRow(landmark: landmark)
+                    }
                 }
             }
+            // 샤라락 생기고 사라지는 효과
+            .animation(.default, value: filteredLandmarks)
             .navigationTitle("Landmarks")
         } detail: {
             Text("Select a Landmark")
