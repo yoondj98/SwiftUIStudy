@@ -12,13 +12,14 @@ struct Landmark: Hashable, Codable, Identifiable {
   
   // MARK: Properties
 
-  var id: Int
-  var name: String
-  var park: String
-  var state: String
-  var description: String
-  private var imageName: String
-  private var coordinates: Coordinates
+  let id: Int
+  let name: String
+  let park: String
+  let state: String
+  let description: String
+  var isFavorite: Bool
+  private let imageName: String
+  private let coordinates: Coordinates
 
   // MARK: Compute Properties
 
