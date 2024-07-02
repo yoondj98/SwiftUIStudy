@@ -14,7 +14,7 @@ struct LandmarkList: View {
             // landmarks는 전역변수로 어디서든 접근이 가능.
             List(landmarks) { landmark in
                 NavigationLink {
-                    LandmarkDetail()
+                    LandmarkDetail(landmark: landmark)
                 } label: {
                     LandmarkRow(landmark: landmark)
                 }

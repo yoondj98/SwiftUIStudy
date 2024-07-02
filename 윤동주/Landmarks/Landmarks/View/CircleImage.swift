@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CircleImage: View {
+    
+    var image: Image
+    
     var body: some View {
-        Image("turtlerock")
+        image
             .clipShape(Circle())
             .overlay { // 잘린 면을 기준으로 inset, offset으로 2씩 stroke 차지
                 Circle().stroke(.white, lineWidth: 4)
@@ -20,5 +23,5 @@ struct CircleImage: View {
 }
 
 #Preview {
-    CircleImage()
+    CircleImage(image: Image("turtlerock"))
 }
