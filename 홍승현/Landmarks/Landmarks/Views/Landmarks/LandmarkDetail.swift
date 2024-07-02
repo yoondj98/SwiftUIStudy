@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
-  
+
   @Environment(ModelData.self) var modelData
   var landmark: Landmark
 

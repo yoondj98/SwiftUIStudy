@@ -9,7 +9,7 @@ import CoreLocation
 import SwiftUI
 
 struct Landmark: Hashable, Codable, Identifiable {
-  
+
   // MARK: Properties
 
   let id: Int
@@ -33,7 +33,6 @@ struct Landmark: Hashable, Codable, Identifiable {
       longitude: coordinates.longitude
       )
   }
-
 
   // MARK: - Coordinates
 
