@@ -9,9 +9,9 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
-        List { // landmarks는 전역변수로 어디서든 접근이 가능.
-            LandmarkRow(landmark: landmarks[0])
-            LandmarkRow(landmark: landmarks[1])
+        // landmarks는 전역변수로 어디서든 접근이 가능.
+        List(landmarks) {
+            LandmarkRow(landmark: $0)
         }
     }
 }
