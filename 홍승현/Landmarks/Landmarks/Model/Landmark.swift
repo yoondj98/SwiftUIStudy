@@ -8,7 +8,7 @@
 import CoreLocation
 import SwiftUI
 
-struct Landmark: Hashable, Codable {
+struct Landmark: Hashable, Codable, Identifiable {
   
   // MARK: Properties
 
