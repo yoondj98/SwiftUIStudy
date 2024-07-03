@@ -19,7 +19,7 @@ struct CategoryItem: View {
             Text(landmark.name)
                 .font(.caption)
         }
-        .padding(.leading, 15)
+        .padding(.horizontal, 7.5)
     }
 }
 

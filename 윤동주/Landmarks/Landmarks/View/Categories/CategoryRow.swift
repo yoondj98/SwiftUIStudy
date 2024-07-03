@@ -16,7 +16,7 @@ struct CategoryRow: View {
         VStack(alignment: .leading) {
             Text(categoryName)
                 .font(.headline)
-                .padding(.leading, 15)
+                .padding(.leading, 0)
                 .padding(.top, 5)
             
             
