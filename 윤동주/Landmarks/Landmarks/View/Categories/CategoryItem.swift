@@ -18,10 +18,10 @@ struct CategoryItem: View {
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
             Text(landmark.name)
-                .foregroundStyle(.primary)
+                .foregroundStyle(.primary) // System Theme에 따라 다른 색상 보임(다크모드)
                 .font(.caption)
         }
-        .padding(.horizontal, 7.5) // System Theme에 따라 다른 색상 보임(다크모드)
+        .padding(.horizontal, 7.5)
     }
 }
 
