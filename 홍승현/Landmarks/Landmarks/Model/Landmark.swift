@@ -18,6 +18,7 @@ struct Landmark: Hashable, Codable, Identifiable {
   let state: String
   let description: String
   var isFavorite: Bool
+  let isFeatured: Bool
   let category: Category
 
 
