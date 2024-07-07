@@ -10,12 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Knock, knock")
-                .padding()
-                .background(Color.yellow, in: RoundedRectangle(cornerRadius: 8))
-            Text("Who's there")
-                .padding()
-                .background(Color.teal, in: RoundedRectangle(cornerRadius: 8))
+            ChatView(text: "Knock, knock!", color: .yellow)
+            ChatView(text: "Who's there", color: .teal)
         }
         .padding()
     }
@@ -23,4 +19,15 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+struct ChatView: View {
+    let text: String
+    let color: Color
+    
+    var body: some View {
+        Text(text)
+            .padding()
+            .background(color, in: RoundedRectangle(cornerRadius: 8))
+    }
 }
